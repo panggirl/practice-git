@@ -16,7 +16,13 @@ $ git config --global color.ui auto
 [color]
   ui = auto
 ```
-然后创建 GitHub 账号、设置头像(可以产生关注点或兴趣的)；设置[SSH Key](https://segmentfault.com/a/1190000002645623),其中`id_rsa`文件是私有密钥，`id_rsa.pub`是公开密钥，查看公开密钥的方法如下：
+然后创建 GitHub 账号、设置头像(可以产生关注点或兴趣的，生成 SSH Key:
+```
+ $ ssh-keygen -t rsa -C "your_email@example.com"
+```
+连续3个回车。如果不需要密码的话。如果不是第一次，就选择overwrite.
+最后得到了两个文件：id_rsa和id_rsa.pub
+其中`id_rsa`文件是私有密钥，`id_rsa.pub`是公开密钥，查看公开密钥的方法如下：
 ```
 $ cat ~/.ssh/id_rsa.pub
 ssh-rsa 公开密钥的内容 your_email@example.com
