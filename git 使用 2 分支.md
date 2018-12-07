@@ -129,11 +129,8 @@ Git还会自动提示我们当前master分支比远程的master分支要超前1�
 $ git add readme.txt 
 $ git commit -m "master 修改"
 ```
-现在，master分支和feature1分支各自都分别有新的提交，变成了这样：
-```
-git-br-feature1
-```
-这种情况下，Git无法执行“快速合并”，只能试图把各自的修改合并起来，但这种合并就可能会有冲突，我们试试看：
+现在，master分支和feature1分支各自都分别有新的提交,这种情况下，Git无法执行“快速合并”，只能试图把各自的修改合并起来，
+但这种合并就可能会有冲突，我们试试看：
 ```
 $ git merge feature1
 Auto-merging readme.md
