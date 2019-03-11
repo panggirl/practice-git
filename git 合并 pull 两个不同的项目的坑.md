@@ -1,4 +1,22 @@
-# git无法pull仓库refusing to merge unrelated histories
+
+# git 合并 pull 两个不同的项目的坑
+在GitHub上创建了仓库且创建了 README 和 .gitignore 文件，在本地的仓库也有 .gitignore 文件，然后想把这本地仓库同GitHub上关联起来，具体坑见下面
+
+### 坑1 fatal: remote origin already exists.
+```
+[dabo@1024 16:18:30 ~/Android/android_project/完整项目学习/PracticeAnimation]
+$ git  remote add origin git@github.com:panggirl/practice-animation.git
+fatal: remote origin already exists.
+```
+
+github常见操作和常见错误！错误提示：`fatal: remote origin already exists.`
+解决办法如下：
+```
+1、先输入$ git remote rm origin
+2、再输入$ git  remote add origin git@github.com:panggirl/practice-animation.git 就不会报错了！
+```
+
+### 坑2  git无法pull仓库refusing to merge unrelated histories
 就在GitHub上创建了仓库且创建了 README 和 .gitignore 文件，在本地的仓库也有 .gitignore 文件，然后想把这本地仓库同GitHub上关联起来，具体操作如下：
 ```
 [dabo@1024 17:21:18 ~/Android/android_project/PracticeAnimation]
