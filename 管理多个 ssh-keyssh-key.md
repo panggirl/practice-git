@@ -7,7 +7,15 @@
 ```
 ssh-keygen -t rsa -C "your_name@email.com"
 Generating public/private rsa key pair.
-Enter file in which to save the key (/Users//.ssh/id_rsa): id_rsa_hostname
+Enter file in which to save the key (/Users//.ssh/id_rsa):id_rsa_hostname
+```
+或者 `ssh-keygen -t rsa -C "fupaizai@163.com" -f id_rsa_fupai`
+```
+[dabo@1024 09:49:47 ~/.ssh]
+$ ssh-keygen -t rsa -C "fupaizai@163.com" -f id_rsa_fupai
+Generating public/private rsa key pair.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
 ```
 ##### 生成ssh-key
 生成ssh-key的时候在 .ssh文件目录下可以看到刚才以 id_rsa_hostname命名的两个文件 —— id_rsa_hostname和 id_rsa_hostname.pub。
