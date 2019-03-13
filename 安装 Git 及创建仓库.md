@@ -1,7 +1,6 @@
-# practice-github
-练习 【GitHub 入门与实践】 
-#### 前期准备
+# 安装 Git 及创建仓库
 
+#### 安装 Git 及 配置
 先安装 Git 参考[廖雪峰官网-安装Git](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137396287703354d8c6c01c904c7d9ff056ae23da865a000)，再设置姓名和邮箱账号地址安装完成后，在命令行输入：
 ```
 $ git config --global user.name "Your Name"
