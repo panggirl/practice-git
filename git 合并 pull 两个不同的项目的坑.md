@@ -59,3 +59,10 @@ fatal: refusing to merge unrelated histories
 ```
 git pull --allow-unrelated-histories
 ```
+
+注：将关联的远程库移除
+```
+$ git remote rm origin
+```
+
+
