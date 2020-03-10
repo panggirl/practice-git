@@ -353,18 +353,41 @@ origin
 或者，用git remote -v显示更详细的信息：
 ```
 $ git remote -v
+
 origin	git@github.com:panggirl/learngit.git (fetch)
 origin	git@github.com:panggirl/learngit.git (push)
 ```
 上面显示了可以抓取和推送的origin的地址。如果没有推送权限，就看不到push的地址。
-推送分支
-推送分支，就是把该分支上的所有本地提交推送到远程库。推送时，要指定远程分支，这样，Git就会把该分支推送到远程库对应的远程分支上：
+本地库关联远程库，在本地仓库目录运行命令：
+```
+$ git remote add origin git@github.com:nanfei9330/learngit.git
+```
+推送分支:
+推送master分支的所有内容
+```
+$ git push -u origin master
+```
+第一次使用加上了-u参数，是推送内容并关联分支。
+推送成功后就可以看到远程和本地的内容一模一样，下次只要本地作了提交，就可以通过命令：
+```
+$ git push origin master
+```
+第一次如果不加 -u 推送后，下次提交时要指定远程分支，这样，Git就会把该分支推送到远程库对应的远程分支上：
 ```
 $ git push origin master
 ```
 如果要推送其他分支，比如dev，就改成：
 ```
 $ git push origin dev
+```
+还有一种情况，就是不管是否存在对应的远程分支，将本地的所有分支都推送到远程主机，这时需要使用–all选项。
+```
+$ git push --all origin
+```
+上面命令表示，将所有本地分支都推送到origin主机。
+还可以把 -u 和 --all 结合起来，是将所有本地分支都推送到origin主机并关联相应分支
+```
+$ git push -u --all origin 
 ```
 但是，并不是一定要把本地分支往远程推送，那么，哪些分支需要推送，哪些不需要呢？
 * master分支是主分支，因此要时刻与远程同步；
