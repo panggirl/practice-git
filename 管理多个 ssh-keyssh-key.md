@@ -83,3 +83,17 @@ Hi USERNAME! You've successfully authenticated, but github does not provide shel
   IdentityFile ~/.ssh/id_rsa_cpy
   Port 443
 ```
+
+
+连接远程仓库
+```
+git remote add origin 仓库地址
+```
+
+查看远程连接
+
+```git remote -v```
+
+git取消与远程仓库的连接
+```git remote remove origin```
+
